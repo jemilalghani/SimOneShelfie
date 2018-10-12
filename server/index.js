@@ -14,7 +14,7 @@ massive(process.env.CONNECTION_STRING).then(database=>{
 
 app.get('/api/inventory', controller.read);
 app.post('/api/inventory', controller.create);
-// app.put('/api/inventory/:id', controller.update);
+app.put('/api/inventory/:id', controller.update);
 // app.delete('/api/inventory/:id', controller.delete);
 
 const SERVER_PORT = 4000;

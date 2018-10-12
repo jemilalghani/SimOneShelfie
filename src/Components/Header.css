@@ -1,0 +1,11 @@
+.header{
+    display: flex;
+}
+.header h1{
+    font-family: 'Open Sans', sans-serif;
+    color:white;
+}
+.header img{
+    margin: 10px;
+    margin-left:30px;
+}

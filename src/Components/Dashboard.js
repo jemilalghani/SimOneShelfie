@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
 import Product from './Product';
+// import './Dashboard.css';
 
 class Dashboard extends Component {
-  render(props) {
-    let display = this.props.list.map((el,i)=>{
+  render() {
+    const productList = this.props.list.map((el,i)=>{
       return <div>
-        <h1 key={i}>{el.name} {el.price} <img src={el.image_url} width='300'/></h1>
-        <Product name={el.name} price={el.price} URL={el.image_url}></Product> 
+        {/* <div key={i}>{el.name} {el.price} {el.image_url}</div> */}
+        <Product key={i} name={el.name} price={el.price} URL={el.image_url}></Product> 
              </div>
     })
     return (
       <div className="Dashboard">
-        Dashboard
-        {display}
+        {productList}
       </div>
     );
   }

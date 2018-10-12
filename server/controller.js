@@ -15,6 +15,15 @@ module.exports={
         }).catch(error=>{
             console.error('error in POST /api/inventory', error)
         })
+    },
+    update:(req,res)=>{
+        const db = req.app.get('db');
+        const {params, query}=req;
+        db.update_product([params.id, query.name, query.price, query.image_url]).then(product=>{
+            res.status(200).json(product)
+        }).catch(error=>{
+            console.error('error in PUT /api/inventory', error)
+        })
     }
 
 

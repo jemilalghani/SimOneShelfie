@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Dashboard from './Components/Dashboard';
 import Form from './Components/Form';
 import Header from './Components/Header';
+
 import axios from 'axios';
 
 import './App.css';
@@ -24,9 +25,13 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Dashboard list={this.state.inventoryList}/>
-        <Form read={this.componentDidMount}/>
-        <Header/>
+        <header>
+          <Header/>
+        </header>
+        <div className="body">
+          <Dashboard list={this.state.inventoryList}/>
+          <Form read={this.componentDidMount}/>
+        </div>
       </div>
     );
   }
