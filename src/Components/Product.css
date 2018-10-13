@@ -1,10 +1,26 @@
 .Product{
-    background:#D34735;
-    height: 200px;
+    height: 150px;
     width: 400px;
-    border-radius: 10px;
-    margin: 10px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+}
+.Product img{
+    height: 140px;
+}
+.Container{
+    background: rgba(15, 15, 73, 0.473);
+    margin: 10px;
+    height: 200px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+}
+.editDelete{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    width:300px;
 }

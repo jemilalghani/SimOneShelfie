@@ -7,7 +7,7 @@ class Form extends Component {
   constructor(){
     super();
     this.state={
-      imageURL:'',
+      imageURL:'https://www.cleh.cl/wp-content/uploads/2017/08/make-checkered-patterns-photoshop-vogue-patterns-5550.png',
       productName:'',
       price: 0
     }
@@ -22,7 +22,7 @@ class Form extends Component {
   }
   cancelButton(){
     this.setState({
-      imageURL:'',
+      imageURL:'https://www.cleh.cl/wp-content/uploads/2017/08/make-checkered-patterns-photoshop-vogue-patterns-5550.png',
       productName:'',
       price: 0
     })
@@ -37,6 +37,9 @@ class Form extends Component {
   render() {
     return (
       <div className="Form">
+        <div className="image"> 
+          <img src={this.state.imageURL} alt="" width='200'></img>
+        </div>
         Product Name:
         <input value={this.state.productName} onChange={e=>this.handleChange('productName',e.target.value)}/>
         Image URL:
@@ -47,7 +50,6 @@ class Form extends Component {
           <button onClick={this.cancelButton}>Cancel</button>
           <button onClick={this.addTo}>Add to Inventory</button>
         </div>
-
       </div>
     );
   }

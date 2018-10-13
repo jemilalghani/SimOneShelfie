@@ -24,6 +24,15 @@ module.exports={
         }).catch(error=>{
             console.error('error in PUT /api/inventory', error)
         })
+    },
+    delete:(req,res)=>{
+        const db = req.app.get('db');
+        const {id}=req.params;
+        db.delete_product(id).then((product)=>{
+            res.status(200).json(product)
+        }).catch(error=>{
+            console.error("error in DELETE /api/inventory", error)
+        })
     }
 
 

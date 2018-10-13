@@ -1,10 +1,16 @@
 .Form{
+    margin-top:10px;
     display:flex;
     flex-direction: column;
     width: 260px;
     height: 400px;
-    background: #3AD886;
+    background:wheat;
     align-items: center;
     justify-content: center;
     border-radius: 10px;
+}
+.Form image{
+    height: 200px;
+    width: 200px;
+
 }
