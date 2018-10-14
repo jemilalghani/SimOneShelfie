@@ -13,7 +13,7 @@ export default function Product(props){
             </div>
             <div className="editDelete">
                 <button onClick={()=>props.delete(props.id)}>Delete</button>
-                <button onClick={props.here}>Edit</button>
+                <button onClick={()=>props.onEditClickAPP(props.el)}>Edit</button>
             </div>
         </div>
     )
